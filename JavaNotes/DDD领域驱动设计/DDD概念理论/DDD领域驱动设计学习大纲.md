@@ -518,8 +518,9 @@ public class Order {
 
 ---
 
-# 12. 值对象 Value Object
+# 12. VO值对象 Value Object
 
+[[DDD里的VO值对象]]
 **值对象**没有独立身份，关注的是值本身。
 
 例如：
@@ -893,6 +894,7 @@ order.pay(...)
 ---
 
 # 18. Repository 仓储
+[[DDD的仓储和适配器]]
 
 Repository 用来持久化聚合。
 
@@ -958,6 +960,7 @@ orderRepository.save(order);
 ---
 
 # 19. 领域事件 Domain Event
+[[DDD领域事件]]
 
 领域事件表示领域中已经发生的事实。
 
