@@ -282,6 +282,7 @@ orderMapper.update(order);
 # 7. 限界上下文 Bounded Context
 
 这是 DDD 最核心的概念之一。
+[[DDD限界上下文]]
 
 **限界上下文**是一个明确的业务语义边界。
 
@@ -452,7 +453,7 @@ DevWiki Studio
 
 # 11. 实体 Entity
 
-**实体**是有唯一身份标识的对象。
+**实体**是有唯一身份标识的对象。[[DDD的Entity实体]]
 
 实体的重点不是属性，而是身份和生命周期。
 
@@ -587,6 +588,7 @@ public record Email(String value) {
 # 13. 聚合 Aggregate
 
 聚合是 DDD 战术设计中最容易误解的概念。
+[[DDD的聚合]]
 
 **聚合是一组强一致性的领域对象边界。**
 
@@ -790,7 +792,7 @@ MQ
 
 有些业务行为不适合放在某个实体或值对象里。
 
-这时可以使用领域服务。
+这时可以使用领域服务。[[DDD的领域服务]]
 
 例如：
 
@@ -839,7 +841,7 @@ ProductService
 
 # 17. 应用服务 Application Service
 
-应用服务负责编排用例。
+应用服务负责编排用例。[[DDD领域编排]]
 
 它通常做这些事：
 
@@ -1092,6 +1094,7 @@ domain 层
 infrastructure 层
     技术实现：数据库、Redis、MQ、HTTP Client、Repository实现
 ```
+[[DDD防腐层ACL]]
 
 图示：
 
@@ -1275,6 +1278,7 @@ public void pay(Long orderId) {
 ```
 
 ## 充血模型
+[[DDD充血模型]]
 
 ```java
 public class Order {
@@ -1650,7 +1654,7 @@ Order 聚合
 
 ---
 
-# 32. DDD 和 MyBatis / JPA 的选择
+# 32. DDD 中 MyBatis / JPA 的选择
 
 ## JPA
 
