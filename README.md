@@ -106,7 +106,7 @@
    git clone https://github.com/seaFall98/ZNotes.git
    ```
 
-2. 使用 [Obsidian](https://obsidian.md/) 打开该文件夹作为 Vault
+2. 使用 [Obsidian](https://obsidian.md/) 打开该文件夹作为 Vault，设置-文件与链接-附件文件夹路径-手动找到“附件”这个文件夹
 
 3. 享受完整的双向链接、图谱视图和 Mermaid 图表渲染体验
 
