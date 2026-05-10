@@ -59,6 +59,7 @@ private UserService userService;
 
 ## 2.1 为什么不要优先用字段注入？
 
+[[Spring不推荐使用@Autowired]]
 很多老项目里常见：
 
 ```java
