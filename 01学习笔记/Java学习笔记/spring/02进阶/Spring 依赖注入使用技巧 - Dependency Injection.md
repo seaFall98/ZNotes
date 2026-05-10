@@ -702,7 +702,7 @@ public class NotifyService {
 
 # 8. `@ConditionalOnMissingBean`：做组件和 Starter 时非常重要
 
-[[Condition的用法]]
+[[Spring Condition第二版]]
 文章里的例子是：
 
 ```java

@@ -1,3 +1,7 @@
+[[Spring Condition第一版]]
+要求简化成了 概述+（概念+用法）+总结 的形式，还是很难读啊
+[[ChatGPT生成内容更具可读性]]
+[[Spring Condition第三版]]
 # Spring Condition 相关的实际用法
 
 ## 概述
