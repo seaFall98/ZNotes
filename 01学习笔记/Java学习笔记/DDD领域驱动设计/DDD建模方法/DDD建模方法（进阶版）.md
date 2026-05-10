@@ -1,3 +1,4 @@
+
 [小傅哥基础版](https://github.com/fuzhengwei/CodeGuide/blob/master/docs/md/road-map/ddd-guide-02.md)
 # DDD 建模方法：从业务现场到 Java 代码
 
