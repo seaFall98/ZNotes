@@ -60,8 +60,9 @@ Response、ErrorCode、Constants 放哪？
 
 # 2. 为什么 MVC 后期会痛？
 
-先看传统 MVC。
+![[Pasted image 20260510204024.png]]
 
+先看传统 MVC。
 很多 Java 项目最后会变成这样：
 
 ```text
@@ -147,6 +148,8 @@ DDD 领域模型表达的是：
 ```text
 触发 -> 函数 -> 连接
 ```
+
+![[Pasted image 20260510204238.png]]
 
 这个说法非常适合 Java 后端理解。文章中提到，DDD 常用于微服务场景，一个系统的调用方式不只是 HTTP，还可能包括 RPC、MQ、TASK，这些都可以理解为“触发”。([GitHub](https://raw.githubusercontent.com/fuzhengwei/CodeGuide/master/docs/md/road-map/ddd.md "raw.githubusercontent.com"))
 
@@ -241,6 +244,7 @@ xfg-frame-types
 xfg-frame-case    可选
 ```
 
+![[Pasted image 20260510204301.png]]
 文章中对这些模块有明确解释：`api` 放 RPC 接口定义，`app` 放启动和配置，`domain` 放领域模型服务，`infrastructure` 放仓储实现，`trigger` 放接口实现、消息接收、任务执行，`types` 放通用类型，`case/application` 用于复杂项目中的领域编排。([GitHub](https://raw.githubusercontent.com/fuzhengwei/CodeGuide/master/docs/md/road-map/ddd.md "raw.githubusercontent.com"))
 
 我们重新整理成一张更好理解的表。
