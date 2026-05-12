@@ -230,7 +230,7 @@ algorithm-expression: t_order_${order_id % 2}
 
 ---
 
-# 5. Java 代码
+# 5. Java 业务代码
 
 **业务代码不用关心数据落到哪个库、哪张表；但必须围绕分片键设计 SQL，否则中间件只能广播查询。**
 
