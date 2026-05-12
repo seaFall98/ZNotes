@@ -1,5 +1,6 @@
 [xfg基础版](https://bugstack.cn/md/road-map/quartz.html)
-
+[[Spring-Schedule 扩展任务]]
+[[JobRunr：Java 持久化后台任务框架]]
 # 结论先行：定时任务不是“写个 `@Scheduled`”这么简单
 
 后端里的**任务调度**本质上是：
