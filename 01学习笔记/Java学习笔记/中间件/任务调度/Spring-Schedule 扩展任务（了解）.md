@@ -1,7 +1,7 @@
 
 >基于 Spring Scheduling 的扩展点，把多个任务自动注册进调度器，实现一种“轻量级动态任务调度能力”。
 
-[[Spring-Schedule、Quartz、XXL-Job 学习指南]]
+[[Schedule、Quartz、XXL-Job 学习指南]]
 [[JobRunr：Java 持久化后台任务框架]]
 
 ---
