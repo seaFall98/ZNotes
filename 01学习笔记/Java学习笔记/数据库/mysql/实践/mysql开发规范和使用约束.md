@@ -164,6 +164,8 @@
 > **禁止**：线上业务库不允许出现。
 
 ---
+[xfg基础版](https://bugstack.cn/md/road-map/mysql.html)
+![[Pasted image 20260513021044.png]]
 
 # 一、总体原则
 
