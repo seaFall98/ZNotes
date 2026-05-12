@@ -167,6 +167,9 @@
 [xfg基础版](https://bugstack.cn/md/road-map/mysql.html)
 ![[Pasted image 20260513021044.png]]
 
+勘误：.ibc->.ibd
+MySQL 的 .ibd 文件是 InnoDB 存储引擎为每个表创建的独立表空间文件，用于存储表数据和索引。
+
 # 一、总体原则
 
 ## 1. 数据库规范不是“代码风格”，而是稳定性约束
