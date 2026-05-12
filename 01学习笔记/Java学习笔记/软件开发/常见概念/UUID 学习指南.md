@@ -840,7 +840,7 @@ public class FileObject {
 ```sql
 CREATE TABLE user_account (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
-    user_no CHAR(32) NOT NULL,
+    user_no CHAR(32) NOT NULL,                    ## uuid 32位 去掉了中划线
     username VARCHAR(64) NOT NULL,
     password_hash VARCHAR(255) NOT NULL,
     created_at DATETIME(3) NOT NULL,
@@ -870,7 +870,7 @@ public class UserRegisterService {
         if (command.username() == null || command.username().isBlank()) {
             throw new IllegalArgumentException("username must not be blank");
         }
-
+		//生成UUID	
         String userNo = UuidUtils.compactUuid();
 
         UserAccountPO po = new UserAccountPO();
