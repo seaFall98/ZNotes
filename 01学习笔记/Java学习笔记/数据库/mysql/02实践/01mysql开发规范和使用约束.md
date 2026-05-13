@@ -1719,7 +1719,7 @@ FROM t_order
 WHERE user_id = ?
    OR order_status = ?;
 ```
-
+[[or什么时候换成union all]]
 ### 推荐改写
 
 ```sql
