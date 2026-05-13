@@ -1040,7 +1040,7 @@ B+Tree 联合索引按 `(user_id, order_status, created_at)` 排序。跳过 `us
 ## 3.5 覆盖索引
 
 **推荐等级：建议**
-
+[[覆盖索引避免回表]]
 ### 业务场景：消息未读数
 
 ```sql
@@ -3332,7 +3332,7 @@ KEY idx_user_status_created(user_id, status, created_at)
     
 - 查询突然变慢。
     
-
+[[隐式转换导致索引失效]]
 ### 根因 SQL
 
 ```sql
