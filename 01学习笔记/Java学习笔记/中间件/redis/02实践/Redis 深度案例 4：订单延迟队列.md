@@ -1,5 +1,5 @@
 [[Redis 深度案例 5：Redis Stream 异步任务]]
-[# 方案设计：基于库表分段扫描和数据Redis预热，优化分布式延迟任务触达时效性](https://mp.weixin.qq.com/s/jJ0vxdeKXHiYZLrwDEBOcQ)
+[[Redis 延迟任务中心设计：从库表扫描到低延迟触达]]
 这一篇对应的是：
 
 > **订单 30 分钟未支付自动关闭：Redis ZSet 延迟队列实现**
