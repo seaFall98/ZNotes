@@ -1,4 +1,4 @@
-
+[[Redis 深度案例 6：Redis 规则引擎]]
 ## 0. 结论先说
 
 **Redis Stream 适合做“轻量级异步任务系统”，但不应该被误认为可以完全替代 RocketMQ / Kafka。**
