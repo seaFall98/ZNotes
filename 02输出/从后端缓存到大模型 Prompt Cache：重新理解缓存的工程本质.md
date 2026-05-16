@@ -1,7 +1,6 @@
-# 缓存不是 Redis：从后端缓存到 DeepSeek Prompt Cache 的统一理解
 
 最近很多人在使用 DeepSeek、Claude Code、Codex、cc switch 这类 AI Coding 工具时，都会看到一个很震撼的现象：
-
+ 
 > 大量输入 Token 并没有被重新计算，而是命中了缓存。
 
 有些网上分享甚至提到 90% 以上的缓存命中率。这个数字看起来很夸张，但它背后的工程逻辑并不神秘。DeepSeek 官方文档中明确提到 Context Caching：当检测到重复输入时，可以复用已经缓存的内容，避免重复计算，从而降低延迟和成本；但它也是 best-effort，不保证 100% 命中，缓存不再使用后通常会在数小时到数天内自动清理。([DeepSeek API Docs](https://api-docs.deepseek.com/news/news0802?utm_source=chatgpt.com "DeepSeek API introduces Context Caching on Disk, cutting ..."))
