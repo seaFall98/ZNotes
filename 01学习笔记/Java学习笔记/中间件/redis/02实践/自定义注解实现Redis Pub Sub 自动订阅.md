@@ -1,7 +1,7 @@
 [xfg原文](https://bugstack.cn/md/road-map/redis.html#_5-%E5%8F%91%E5%B8%83-%E8%AE%A2%E9%98%85)
 ## 结论
 
-`@RedisTopic`是原文里自己定义的**业务标识注解**。
+`@RedisTopic`是原文自己定义的**业务标识注解**。
 
 它的作用可以概括为一句话：
 
