@@ -97,16 +97,21 @@ implements MessageListener<String>
 
 ```java
 // 添加监听
+//获取MessageListener实现类的name
 String[] beanNamesForType = applicationContext.getBeanNamesForType(MessageListener.class);
-
+//循环处理每一个MessageListener
 for (String beanName : beanNamesForType) {
+	//根据name拿到bean
     MessageListener bean = applicationContext.getBean(beanName, MessageListener.class);
+    //反射拿到=bean的类信息
     Class<?> beanClass = bean.getClass();
-
+	//判断是否有自定义@RedisTopic
     if (beanClass.isAnnotationPresent(RedisTopic.class)) {
+		//拿到自定义注解类RedisTopic
         RedisTopic redisTopic = beanClass.getAnnotation(RedisTopic.class);
-
+		//根据注解的topic()属性，用redis客户端拿到实际的redis的topic的类RTopic
         RTopic topic = redissonClient.getTopic(redisTopic.topic());
+        //添加监听
         topic.addListener(String.class, bean);
 
         // 动态创建 bean 对象，注入到 spring 容器，bean 的名称为 redisTopic.topic()
