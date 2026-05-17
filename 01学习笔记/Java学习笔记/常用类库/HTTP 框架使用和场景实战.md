@@ -1,4 +1,4 @@
-[xfg基础版](https://bugstack.cn/md/road-map/http.html)
+[xfg的教学案例](https://bugstack.cn/md/road-map/http.html)
 
 # HTTP 框架使用和场景实战：从“能调接口”到“生产级 HTTP 集成体系”
 
