@@ -1,5 +1,4 @@
-# Guava 实战使用指南：Java 后端项目里到底怎么用
-
+[xfg](https://bugstack.cn/md/road-map/guava.html)
 ## 1. 先给结论
 
 ### 1.1 新项目还推荐使用 Guava 吗？
@@ -14,16 +13,16 @@
 
 但 Guava 仍然有价值，尤其是：
 
-|场景|Guava 是否仍有价值|
-|---|---|
-|不可变集合|有价值，表达力强|
-|Multimap / Multiset / BiMap / Table|很有价值，JDK 没有直接替代|
-|Preconditions|有价值，但可被 Spring / JDK 部分替代|
-|Joiner / Splitter|有价值，尤其是复杂字符串拆分|
-|Guava Cache|老项目可维护，新项目更推荐 Caffeine|
-|ListenableFuture|不建议新项目优先使用|
-|Optional|不建议优先使用 Guava Optional|
-|Files / Resources / ByteStreams|可用，但很多场景 JDK 已够用|
+| 场景                                  | Guava 是否仍有价值              |
+| ----------------------------------- | ------------------------- |
+| 不可变集合                               | 有价值，表达力强                  |
+| Multimap / Multiset / BiMap / Table | 很有价值，JDK 没有直接替代           |
+| Preconditions                       | 有价值，但可被 Spring / JDK 部分替代 |
+| Joiner / Splitter                   | 有价值，尤其是复杂字符串拆分            |
+| Guava Cache                         | 老项目可维护，新项目更推荐 Caffeine    |
+| ListenableFuture                    | 不建议新项目优先使用                |
+| Optional                            | 不建议优先使用 Guava Optional    |
+| Files / Resources / ByteStreams     | 可用，但很多场景 JDK 已够用          |
 
 Guava 当前仍然是一个活跃项目，官方仓库说明其 Maven 坐标为 `com.google.guava:guava`，并且区分 JRE 与 Android 两种 flavor；JRE flavor 面向 Java 8+。([GitHub](https://github.com/google/guava?utm_source=chatgpt.com "Guava: Google Core Libraries for Java"))
 
