@@ -1,7 +1,7 @@
 [Guava官方wiki](https://github.com/google/guava/wiki)
 [xfg](https://bugstack.cn/md/road-map/guava.html)
 ## 1. 先给结论
-
+![[ChatGPT Image May 18, 2026, 10_55_46 PM.png]]
 
 
 ### 1.1 新项目还推荐使用 Guava 吗？
