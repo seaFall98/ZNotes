@@ -2,6 +2,69 @@
 
 # HTTP 框架使用和场景实战：从“能调接口”到“生产级 HTTP 集成体系”
 
+
+```mermaid
+mindmap
+  root((HTTP 生产级实战))
+    协议基础
+      Method
+      Header
+      Status Code
+      Body
+      Cookie
+      HTTPS
+    客户端选型
+      RestClient
+      WebClient
+      OkHttp
+      Apache HttpClient
+      OpenFeign
+      HTTP Interface
+    工程封装
+      Client层
+      Gateway层
+      DTO隔离
+      Mapper转换
+      配置中心
+    稳定性治理
+      超时
+      重试
+      熔断
+      限流
+      隔舱
+      降级
+    安全
+      Token
+      签名
+      验签
+      HTTPS
+      日志脱敏
+      Secret管理
+    可观测性
+      Log
+      Metrics
+      Trace
+      Alert
+      Prometheus
+      OpenTelemetry
+    典型场景
+      支付
+      短信
+      AI服务
+      Webhook
+      文件上传
+      API聚合
+    测试
+      单元测试
+      MockServer
+      契约测试
+      集成测试
+      压测
+```
+
+---
+
+
 ## 0. 结论先行
 
 在企业级 Java 后端里，**HTTP 调用不是简单的 `发请求 -> 拿响应`**。真正的生产级 HTTP 集成要解决的是：
@@ -1766,70 +1829,7 @@ catch (Exception e) {
 
 ---
 
-# 29. 最终知识地图
-
-```mermaid
-mindmap
-  root((HTTP 生产级实战))
-    协议基础
-      Method
-      Header
-      Status Code
-      Body
-      Cookie
-      HTTPS
-    客户端选型
-      RestClient
-      WebClient
-      OkHttp
-      Apache HttpClient
-      OpenFeign
-      HTTP Interface
-    工程封装
-      Client层
-      Gateway层
-      DTO隔离
-      Mapper转换
-      配置中心
-    稳定性治理
-      超时
-      重试
-      熔断
-      限流
-      隔舱
-      降级
-    安全
-      Token
-      签名
-      验签
-      HTTPS
-      日志脱敏
-      Secret管理
-    可观测性
-      Log
-      Metrics
-      Trace
-      Alert
-      Prometheus
-      OpenTelemetry
-    典型场景
-      支付
-      短信
-      AI服务
-      Webhook
-      文件上传
-      API聚合
-    测试
-      单元测试
-      MockServer
-      契约测试
-      集成测试
-      压测
-```
-
----
-
-# 30. 关键词总结
+# 29. 关键词总结
 
 **核心关键词：**
 
