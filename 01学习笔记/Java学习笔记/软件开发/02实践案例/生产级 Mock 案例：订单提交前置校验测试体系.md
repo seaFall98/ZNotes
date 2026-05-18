@@ -90,6 +90,7 @@ flowchart TD
 |分支多|风控拒绝、库存不足、创建成功、外部异常都要覆盖|
 
 所以这个案例的目标不是“学会一个 Mockito API”，而是建立一套接近生产项目的 Mock 测试体系。
+基础案例可参考[xfgmock](https://bugstack.cn/md/road-map/mock.html)
 
 ---
 
