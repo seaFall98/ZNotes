@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">AI Harness Engineering 工程架构图</title>
+  <desc id="desc">从用户输入到最终响应，并包含知识检索、工具调用、安全护栏、观测评测与版本回滚闭环的 AI Harness 工程架构图。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569" />
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb" />
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.14"/>
+    </filter>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 30px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748b; }
+      .zone-title { font: 700 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #334155; letter-spacing: .3px; }
+      .node-title { font: 700 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
+      .node-sub { font: 400 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; }
+      .small-title { font: 700 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
+      .small-sub { font: 400 12px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; }
+      .note { font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; }
+      .node { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.5; filter: url(#shadow); }
+      .node-blue { fill: #eff6ff; stroke: #93c5fd; stroke-width: 1.5; filter: url(#shadow); }
+      .node-green { fill: #ecfdf5; stroke: #86efac; stroke-width: 1.5; filter: url(#shadow); }
+      .node-amber { fill: #fffbeb; stroke: #fcd34d; stroke-width: 1.5; filter: url(#shadow); }
+      .node-red { fill: #fef2f2; stroke: #fca5a5; stroke-width: 1.5; filter: url(#shadow); }
+      .zone { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.2; stroke-dasharray: 6 6; }
+      .arrow { fill: none; stroke: #475569; stroke-width: 2.2; marker-end: url(#arrow); }
+      .arrow-blue { fill: none; stroke: #2563eb; stroke-width: 2.4; marker-end: url(#arrow-blue); }
+      .arrow-dash { fill: none; stroke: #64748b; stroke-width: 2; stroke-dasharray: 8 6; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1400" height="820" rx="24"/>
+  <text x="64" y="58" class="title">AI Harness Engineering：生产级运行与治理外壳</text>
+  <text x="64" y="86" class="subtitle">核心主链路：输入规范化 → 上下文构建 → 模型运行 → 输出解析与安全治理；外围闭环负责知识、工具、观测、评测和回滚。</text>
+
+  <!-- Main flow zones -->
+  <rect x="48" y="120" width="1304" height="410" rx="22" class="zone"/>
+  <text x="72" y="150" class="zone-title">ONLINE REQUEST PATH</text>
+
+  <!-- Nodes: row 1 -->
+  <rect x="76" y="190" width="170" height="96" rx="18" class="node-blue"/>
+  <text x="161" y="225" text-anchor="middle" class="node-title">User Input</text>
+  <text x="161" y="250" text-anchor="middle" class="node-sub">用户请求</text>
+
+  <rect x="300" y="178" width="210" height="120" rx="18" class="node-blue"/>
+  <text x="405" y="215" text-anchor="middle" class="node-title">Input Normalizer</text>
+  <text x="405" y="242" text-anchor="middle" class="node-sub">Schema / Auth / Intent</text>
+  <text x="405" y="264" text-anchor="middle" class="node-sub">租户、权限、风险识别</text>
+
+  <rect x="570" y="160" width="230" height="92" rx="18" class="node"/>
+  <text x="685" y="195" text-anchor="middle" class="node-title">Prompt Layer</text>
+  <text x="685" y="222" text-anchor="middle" class="node-sub">System / Developer / Task</text>
+
+  <rect x="570" y="292" width="230" height="112" rx="18" class="node-green"/>
+  <text x="685" y="327" text-anchor="middle" class="node-title">Context Builder</text>
+  <text x="685" y="354" text-anchor="middle" class="node-sub">History / Memory / State</text>
+  <text x="685" y="376" text-anchor="middle" class="node-sub">RAG 证据 / 工具结果</text>
+
+  <rect x="870" y="220" width="220" height="118" rx="18" class="node-amber"/>
+  <text x="980" y="257" text-anchor="middle" class="node-title">LLM Runtime</text>
+  <text x="980" y="284" text-anchor="middle" class="node-sub">Model Call / Streaming</text>
+  <text x="980" y="306" text-anchor="middle" class="node-sub">Token / Cost Control</text>
+
+  <rect x="1148" y="178" width="170" height="88" rx="18" class="node"/>
+  <text x="1233" y="212" text-anchor="middle" class="small-title">Output Parser</text>
+  <text x="1233" y="237" text-anchor="middle" class="small-sub">JSON Schema / Validation</text>
+
+  <rect x="1148" y="318" width="170" height="92" rx="18" class="node-red"/>
+  <text x="1233" y="352" text-anchor="middle" class="small-title">Guardrails</text>
+  <text x="1233" y="377" text-anchor="middle" class="small-sub">Safety / PII / Rules</text>
+
+  <rect x="1148" y="450" width="170" height="62" rx="18" class="node-green"/>
+  <text x="1233" y="488" text-anchor="middle" class="small-title">Final Response</text>
+
+  <!-- Supporting online nodes -->
+  <rect x="300" y="360" width="210" height="108" rx="18" class="node-green"/>
+  <text x="405" y="395" text-anchor="middle" class="small-title">Retriever + Vector DB</text>
+  <text x="405" y="420" text-anchor="middle" class="small-sub">Query Rewrite / Rerank</text>
+  <text x="405" y="442" text-anchor="middle" class="small-sub">Knowledge Base</text>
+
+  <rect x="870" y="386" width="220" height="100" rx="18" class="node"/>
+  <text x="980" y="420" text-anchor="middle" class="small-title">Tool Router / Executor</text>
+  <text x="980" y="445" text-anchor="middle" class="small-sub">Registry / Permission / Policy</text>
+  <text x="980" y="467" text-anchor="middle" class="small-sub">Timeout / Retry / Sandbox</text>
+
+  <!-- Main arrows -->
+  <path class="arrow-blue" d="M246 238 H300"/>
+  <path class="arrow-blue" d="M510 238 C535 238 535 206 570 206"/>
+  <path class="arrow-blue" d="M510 238 C540 238 535 348 570 348"/>
+  <path class="arrow" d="M800 206 C835 206 835 260 870 260"/>
+  <path class="arrow-blue" d="M800 348 C835 348 835 298 870 298"/>
+  <path class="arrow" d="M1090 280 H1148"/>
+  <path class="arrow" d="M1233 266 V318"/>
+  <path class="arrow-blue" d="M1233 410 V450"/>
+
+  <!-- Knowledge and tools arrows -->
+  <path class="arrow" d="M570 368 C538 368 538 414 510 414"/>
+  <path class="arrow" d="M510 440 C548 440 548 386 570 386"/>
+  <path class="arrow" d="M800 382 C835 382 835 436 870 436"/>
+  <path class="arrow" d="M980 386 V338"/>
+  <path class="arrow-dash" d="M870 466 C792 500 690 492 690 404"/>
+
+  <!-- Failure path -->
+  <rect x="940" y="548" width="230" height="72" rx="18" class="node-red"/>
+  <text x="1055" y="580" text-anchor="middle" class="small-title">Refuse / Rewrite / Human Review</text>
+  <text x="1055" y="604" text-anchor="middle" class="small-sub">不通过时进入安全处理</text>
+  <path class="arrow-dash" d="M1148 364 C1100 364 1055 480 1055 548"/>
+
+  <!-- Ops loop -->
+  <rect x="48" y="660" width="1304" height="116" rx="22" class="zone"/>
+  <text x="72" y="690" class="zone-title">GOVERNANCE LOOP</text>
+
+  <rect x="220" y="708" width="210" height="52" rx="16" class="node"/>
+  <text x="325" y="740" text-anchor="middle" class="small-title">Observability</text>
+
+  <rect x="500" y="708" width="210" height="52" rx="16" class="node"/>
+  <text x="605" y="740" text-anchor="middle" class="small-title">Eval System</text>
+
+  <rect x="780" y="708" width="210" height="52" rx="16" class="node"/>
+  <text x="885" y="740" text-anchor="middle" class="small-title">Feedback Loop</text>
+
+  <rect x="1060" y="708" width="210" height="52" rx="16" class="node"/>
+  <text x="1165" y="740" text-anchor="middle" class="small-title">Versioning &amp; Rollback</text>
+
+  <path class="arrow" d="M430 734 H500"/>
+  <path class="arrow" d="M710 734 H780"/>
+  <path class="arrow" d="M990 734 H1060"/>
+
+  <path class="arrow-dash" d="M980 338 C980 636 325 620 325 708"/>
+  <path class="arrow-dash" d="M1233 512 C1233 644 885 628 885 708"/>
+  <path class="arrow-dash" d="M1165 708 C1165 630 742 598 742 404"/>
+  <path class="arrow-dash" d="M1165 708 C1165 590 684 566 684 252"/>
+
+  <text x="72" y="802" class="note">说明：实线表示请求主路径，虚线表示观测、反馈和版本治理闭环。</text>
+</svg>

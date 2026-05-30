@@ -500,48 +500,7 @@ prompt_version + model_version + retriever_version + tool_version + policy_versi
 
 ## 4. 工程架构图
 
-```mermaid
-flowchart TD
-    A[User Input] --> B[Input Normalizer<br/>Schema / Auth / Intent]
-    B --> C[Prompt Layer<br/>System / Developer / Task Prompt]
-    B --> D[Context Builder<br/>History / Memory / User State]
-    D --> E[Retriever<br/>Query Rewrite / Rerank]
-    E --> F[(Vector DB<br/>Knowledge Base)]
-    F --> D
-
-    D --> G[Tool Router<br/>Tool Registry / Permission / Policy]
-    C --> H[LLM Runtime]
-    D --> H
-    G --> H
-
-    H --> I{Tool Call?}
-    I -- Yes --> J[Tool Executor<br/>Timeout / Retry / Sandbox]
-    J --> K[Tool Result Normalizer]
-    K --> D
-    I -- No --> L[Output Parser<br/>JSON Schema / Validation]
-
-    L --> M[Guardrails<br/>Safety / Compliance / PII / Business Rules]
-    M --> N{Pass?}
-    N -- No --> O[Refuse / Rewrite / Human Review]
-    N -- Yes --> P[Final Response]
-
-    B --> Q[Observability<br/>Trace / Logs / Metrics / Cost]
-    C --> Q
-    D --> Q
-    E --> Q
-    G --> Q
-    H --> Q
-    L --> Q
-    M --> Q
-
-    Q --> R[Eval System<br/>Golden Set / Regression / LLM Judge]
-    P --> S[Feedback Loop<br/>User Feedback / Human Label / Data Flywheel]
-    S --> R
-    R --> T[Versioning & Rollback<br/>Prompt / Model / RAG / Tool / Policy]
-    T --> C
-    T --> D
-    T --> G
-```
+![[ChatGPT Image May 31, 2026, 02_10_42 AM.png]]
 
 ### 4.1 User Input
 
