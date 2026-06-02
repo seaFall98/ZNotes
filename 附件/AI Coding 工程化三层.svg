@@ -1,0 +1,32 @@
+<svg width="760" height="360" viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="760" height="360" fill="#ffffff"/>
+  <text x="380" y="36" text-anchor="middle" font-size="24" font-weight="700" fill="#111827">AI Coding 工程化三层</text>
+
+  <rect x="50" y="80" width="190" height="90" rx="16" fill="#EEF2FF" stroke="#111827" stroke-width="1.5"/>
+  <text x="145" y="112" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">Prompt</text>
+  <text x="145" y="140" text-anchor="middle" font-size="13" fill="#374151">把模糊需求</text>
+  <text x="145" y="160" text-anchor="middle" font-size="13" fill="#374151">变成任务协议</text>
+
+  <rect x="285" y="80" width="190" height="90" rx="16" fill="#ECFDF5" stroke="#111827" stroke-width="1.5"/>
+  <text x="380" y="112" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">Context</text>
+  <text x="380" y="140" text-anchor="middle" font-size="13" fill="#374151">把项目知识</text>
+  <text x="380" y="160" text-anchor="middle" font-size="13" fill="#374151">变成可用上下文</text>
+
+  <rect x="520" y="80" width="190" height="90" rx="16" fill="#F3F4F6" stroke="#111827" stroke-width="1.5"/>
+  <text x="615" y="112" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">Harness</text>
+  <text x="615" y="140" text-anchor="middle" font-size="13" fill="#374151">把 AI 工作</text>
+  <text x="615" y="160" text-anchor="middle" font-size="13" fill="#374151">变成工程闭环</text>
+
+  <line x1="240" y1="125" x2="285" y2="125" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="475" y1="125" x2="520" y2="125" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="105" y="230" width="550" height="70" rx="18" fill="#ffffff" stroke="#111827" stroke-width="1.8"/>
+  <text x="380" y="260" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">从“让 AI 回答”到“让 AI 可靠交付”</text>
+  <text x="380" y="284" text-anchor="middle" font-size="13" fill="#4B5563">任务表达 → 上下文供应 → 执行约束 → 验证反馈 → 持续改进</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#111827"/>
+    </marker>
+  </defs>
+</svg>

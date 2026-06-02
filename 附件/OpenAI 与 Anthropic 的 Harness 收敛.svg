@@ -1,0 +1,28 @@
+<svg width="760" height="500" viewBox="0 0 760 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="760" height="500" fill="#ffffff"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">OpenAI 与 Anthropic 的 Harness 收敛</text>
+
+  <rect x="60" y="80" width="280" height="300" rx="18" fill="#EEF2FF" stroke="#111827" stroke-width="1.5"/>
+  <text x="200" y="115" text-anchor="middle" font-size="18" font-weight="700">OpenAI 路线</text>
+  <text x="200" y="155" text-anchor="middle" font-size="13">Codex Harness</text>
+  <text x="200" y="185" text-anchor="middle" font-size="13">App Server / Codex Core</text>
+  <text x="200" y="215" text-anchor="middle" font-size="13">Agent-first Codebase</text>
+  <text x="200" y="245" text-anchor="middle" font-size="13">Symphony Orchestration</text>
+  <text x="200" y="275" text-anchor="middle" font-size="13">Self-improving Loop</text>
+  <text x="200" y="305" text-anchor="middle" font-size="13">Sandbox / Approval</text>
+  <text x="200" y="345" text-anchor="middle" font-size="13" font-weight="700">偏平台化、编排化、生产闭环</text>
+
+  <rect x="420" y="80" width="280" height="300" rx="18" fill="#ECFDF5" stroke="#111827" stroke-width="1.5"/>
+  <text x="560" y="115" text-anchor="middle" font-size="18" font-weight="700">Anthropic 路线</text>
+  <text x="560" y="155" text-anchor="middle" font-size="13">Context Engineering</text>
+  <text x="560" y="185" text-anchor="middle" font-size="13">Long-running Agents</text>
+  <text x="560" y="215" text-anchor="middle" font-size="13">Planner / Generator / Evaluator</text>
+  <text x="560" y="245" text-anchor="middle" font-size="13">Managed Agents</text>
+  <text x="560" y="275" text-anchor="middle" font-size="13">Auto Mode</text>
+  <text x="560" y="305" text-anchor="middle" font-size="13">Containment</text>
+  <text x="560" y="345" text-anchor="middle" font-size="13" font-weight="700">偏运行时、安全、权限边界</text>
+
+  <rect x="150" y="420" width="460" height="55" rx="16" fill="#111827"/>
+  <text x="380" y="445" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">共同方向</text>
+  <text x="380" y="466" text-anchor="middle" font-size="12" fill="#D1D5DB">Agent 可运行、可编排、可验证、可恢复、可约束</text>
+</svg>
