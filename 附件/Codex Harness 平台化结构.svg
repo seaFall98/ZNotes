@@ -1,35 +1,26 @@
-<svg width="760" height="440" viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg">
-  <rect width="760" height="440" fill="#ffffff"/>
-  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">Codex Harness 平台化结构</text>
+<svg width="760" height="480" viewBox="0 0 760 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Codex Harness 平台化结构</title>
+  <desc id="desc">Codex 从多端入口进入 App Server，再由 Core Runtime 负责 Agent Loop、工具执行、线程持久化和沙箱策略。</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#111827"/></marker><style>.title{font:700 23px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#111827}.sub{font:400 13px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#6B7280}.h{font:700 15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#111827}.t{font:400 12px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#4B5563}.box{stroke:#111827;stroke-width:1.35}.line{stroke:#111827;stroke-width:2;marker-end:url(#arrow)}</style></defs>
+  <rect width="760" height="480" fill="#fff"/>
+  <text x="380" y="36" text-anchor="middle" class="title">Codex Harness 平台化结构</text>
+  <text x="380" y="60" text-anchor="middle" class="sub">从“一个客户端功能”抽象成运行时、协议、工具和权限系统</text>
 
-  <rect x="265" y="80" width="230" height="65" rx="16" fill="#111827"/>
-  <text x="380" y="108" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">Codex App Server</text>
-  <text x="380" y="130" text-anchor="middle" font-size="12" fill="#D1D5DB">JSON-RPC · Event Stream · Thread Manager</text>
+  <g>
+    <rect x="48" y="105" width="130" height="58" rx="14" fill="#EEF2FF" class="box"/><text x="113" y="129" text-anchor="middle" class="h">CLI</text><text x="113" y="149" text-anchor="middle" class="t">命令行入口</text>
+    <rect x="220" y="105" width="130" height="58" rx="14" fill="#ECFDF5" class="box"/><text x="285" y="129" text-anchor="middle" class="h">IDE</text><text x="285" y="149" text-anchor="middle" class="t">编辑器入口</text>
+    <rect x="392" y="105" width="130" height="58" rx="14" fill="#F3F4F6" class="box"/><text x="457" y="129" text-anchor="middle" class="h">Web / App</text><text x="457" y="149" text-anchor="middle" class="t">图形界面</text>
+    <rect x="564" y="105" width="148" height="58" rx="14" fill="#FEF3C7" class="box"/><text x="638" y="129" text-anchor="middle" class="h">Automation</text><text x="638" y="149" text-anchor="middle" class="t">后台任务</text>
+  </g>
 
-  <rect x="60" y="215" width="140" height="60" rx="14" fill="#EEF2FF" stroke="#111827"/>
-  <text x="130" y="242" text-anchor="middle" font-size="14" font-weight="700">CLI</text>
-  <text x="130" y="262" text-anchor="middle" font-size="12" fill="#4B5563">命令行入口</text>
+  <rect x="245" y="220" width="270" height="70" rx="18" fill="#111827"/>
+  <text x="380" y="248" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">Codex App Server</text>
+  <text x="380" y="272" text-anchor="middle" font-size="12" fill="#D1D5DB">JSON-RPC · Event Stream · Thread Manager</text>
 
-  <rect x="230" y="215" width="140" height="60" rx="14" fill="#ECFDF5" stroke="#111827"/>
-  <text x="300" y="242" text-anchor="middle" font-size="14" font-weight="700">IDE</text>
-  <text x="300" y="262" text-anchor="middle" font-size="12" fill="#4B5563">编辑器入口</text>
+  <line x1="113" y1="163" x2="300" y2="220" class="line"/><line x1="285" y1="163" x2="345" y2="220" class="line"/><line x1="457" y1="163" x2="415" y2="220" class="line"/><line x1="638" y1="163" x2="465" y2="220" class="line"/>
 
-  <rect x="400" y="215" width="140" height="60" rx="14" fill="#F3F4F6" stroke="#111827"/>
-  <text x="470" y="242" text-anchor="middle" font-size="14" font-weight="700">Web / App</text>
-  <text x="470" y="262" text-anchor="middle" font-size="12" fill="#4B5563">图形界面</text>
-
-  <rect x="570" y="215" width="140" height="60" rx="14" fill="#FEF3C7" stroke="#111827"/>
-  <text x="640" y="242" text-anchor="middle" font-size="14" font-weight="700">Automation</text>
-  <text x="640" y="262" text-anchor="middle" font-size="12" fill="#4B5563">后台任务</text>
-
-  <line x1="380" y1="145" x2="130" y2="215" stroke="#111827" stroke-width="2"/>
-  <line x1="380" y1="145" x2="300" y2="215" stroke="#111827" stroke-width="2"/>
-  <line x1="380" y1="145" x2="470" y2="215" stroke="#111827" stroke-width="2"/>
-  <line x1="380" y1="145" x2="640" y2="215" stroke="#111827" stroke-width="2"/>
-
-  <rect x="120" y="340" width="520" height="60" rx="16" fill="#F9FAFB" stroke="#111827"/>
-  <text x="380" y="366" text-anchor="middle" font-size="15" font-weight="700">Codex Core</text>
-  <text x="380" y="388" text-anchor="middle" font-size="12" fill="#4B5563">Agent Loop · Tool Execution · Thread Persistence · Sandbox Policy · Skills · MCP</text>
-
-  <line x1="380" y1="145" x2="380" y2="340" stroke="#111827" stroke-width="2" stroke-dasharray="6 6"/>
+  <rect x="70" y="355" width="620" height="76" rx="20" fill="#F9FAFB" class="box"/>
+  <text x="380" y="382" text-anchor="middle" class="h">Codex Core Runtime</text>
+  <text x="380" y="407" text-anchor="middle" class="t">Agent Loop · Tool Execution · Thread Persistence · Config/Auth · Sandbox Policy · Skills · MCP</text>
+  <line x1="380" y1="290" x2="380" y2="355" class="line"/>
 </svg>

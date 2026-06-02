@@ -1,38 +1,35 @@
-<svg width="760" height="520" viewBox="0 0 760 520" xmlns="http://www.w3.org/2000/svg">
-  <rect width="760" height="520" fill="#ffffff"/>
-  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">OpenAI Harness 演进线</text>
+<svg width="760" height="500" viewBox="0 0 760 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">OpenAI Harness 工程趋势观察</title>
+  <desc id="desc">基于公开资料观察到的 OpenAI Harness 工程趋势：平台化、编排化、生产反馈闭环和安全边界。</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker><style>.title{font:700 23px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#111827}.sub{font:400 13px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#6B7280}.h{font:700 15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#111827}.t{font:400 12px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#4B5563}.box{stroke:#111827;stroke-width:1.35}.line{stroke:#2563EB;stroke-width:2.3;marker-end:url(#arrow)}</style></defs>
+  <rect width="760" height="500" fill="#fff"/>
+  <text x="380" y="36" text-anchor="middle" class="title">OpenAI Harness：公开资料中的工程趋势观察</text>
+  <text x="380" y="60" text-anchor="middle" class="sub">不是官方路线图，而是从 Codex 相关公开实践中看到的工程方向</text>
 
-  <line x1="380" y1="70" x2="380" y2="460" stroke="#111827" stroke-width="2"/>
+  <rect x="55" y="105" width="190" height="145" rx="18" fill="#EEF2FF" class="box"/>
+  <text x="150" y="136" text-anchor="middle" class="h">运行时平台化</text>
+  <text x="150" y="166" text-anchor="middle" class="t">Codex Agent Loop</text>
+  <text x="150" y="188" text-anchor="middle" class="t">App Server / Core</text>
+  <text x="150" y="210" text-anchor="middle" class="t">Thread Persistence</text>
+  <text x="150" y="232" text-anchor="middle" class="t">Protocol / Event Stream</text>
 
-  <g font-size="13" fill="#111827">
-    <circle cx="380" cy="90" r="8" fill="#2563EB"/>
-    <rect x="420" y="70" width="250" height="45" rx="10" fill="#EEF2FF" stroke="#111827"/>
-    <text x="545" y="98" text-anchor="middle" font-weight="700">Codex Agent Loop</text>
+  <rect x="285" y="105" width="190" height="145" rx="18" fill="#ECFDF5" class="box"/>
+  <text x="380" y="136" text-anchor="middle" class="h">任务编排化</text>
+  <text x="380" y="166" text-anchor="middle" class="t">Agent-first Codebase</text>
+  <text x="380" y="188" text-anchor="middle" class="t">Skills in Repo</text>
+  <text x="380" y="210" text-anchor="middle" class="t">PR Review Loop</text>
+  <text x="380" y="232" text-anchor="middle" class="t">Symphony / Issue Control Plane</text>
 
-    <circle cx="380" cy="150" r="8" fill="#2563EB"/>
-    <rect x="90" y="130" width="250" height="45" rx="10" fill="#F9FAFB" stroke="#111827"/>
-    <text x="215" y="158" text-anchor="middle" font-weight="700">Codex App Server</text>
+  <rect x="515" y="105" width="190" height="145" rx="18" fill="#FEF3C7" class="box"/>
+  <text x="610" y="136" text-anchor="middle" class="h">反馈与安全闭环</text>
+  <text x="610" y="166" text-anchor="middle" class="t">Production Traces</text>
+  <text x="610" y="188" text-anchor="middle" class="t">Targeted Evals</text>
+  <text x="610" y="210" text-anchor="middle" class="t">Self-improving Loop</text>
+  <text x="610" y="232" text-anchor="middle" class="t">Sandbox / Approval</text>
 
-    <circle cx="380" cy="210" r="8" fill="#2563EB"/>
-    <rect x="420" y="190" width="250" height="45" rx="10" fill="#ECFDF5" stroke="#111827"/>
-    <text x="545" y="218" text-anchor="middle" font-weight="700">Agent-first Codebase</text>
+  <line x1="245" y1="178" x2="285" y2="178" class="line"/><line x1="475" y1="178" x2="515" y2="178" class="line"/>
 
-    <circle cx="380" cy="270" r="8" fill="#2563EB"/>
-    <rect x="90" y="250" width="250" height="45" rx="10" fill="#F3F4F6" stroke="#111827"/>
-    <text x="215" y="278" text-anchor="middle" font-weight="700">Long-horizon Codex</text>
-
-    <circle cx="380" cy="330" r="8" fill="#2563EB"/>
-    <rect x="420" y="310" width="250" height="45" rx="10" fill="#FEF3C7" stroke="#111827"/>
-    <text x="545" y="338" text-anchor="middle" font-weight="700">Symphony Orchestration</text>
-
-    <circle cx="380" cy="390" r="8" fill="#2563EB"/>
-    <rect x="90" y="370" width="250" height="45" rx="10" fill="#E0F2FE" stroke="#111827"/>
-    <text x="215" y="398" text-anchor="middle" font-weight="700">Self-improving Agents</text>
-
-    <circle cx="380" cy="450" r="8" fill="#2563EB"/>
-    <rect x="420" y="430" width="250" height="45" rx="10" fill="#FEE2E2" stroke="#111827"/>
-    <text x="545" y="458" text-anchor="middle" font-weight="700">Sandbox / Safety Boundary</text>
-  </g>
-
-  <text x="380" y="500" text-anchor="middle" font-size="13" fill="#4B5563">从 coding agent 到可嵌入、可编排、可长期运行、可安全约束的开发平台</text>
+  <rect x="105" y="325" width="550" height="84" rx="22" fill="#111827"/>
+  <text x="380" y="358" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">核心判断</text>
+  <text x="380" y="384" text-anchor="middle" font-size="13" fill="#D1D5DB">Codex 的重点不只是“更会写代码”，而是进入 repo、issue、CI、eval、sandbox 组成的工程系统</text>
 </svg>
