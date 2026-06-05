@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">执行 / 实验 / 战略三层闭环图</title>
+  <desc id="desc">展示 AI 自动化从执行闭环向实验闭环、战略闭环推进。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L12,7 L2,12 Z" fill="#7c3aed"/>
+    </marker>
+    <style>
+      .bg{fill:#f8fafc}.title{font:700 34px -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",Arial,sans-serif;fill:#0f172a}.sub{font:400 22px -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",Arial,sans-serif;fill:#475569}.layerTitle{font:800 30px -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",Arial,sans-serif;fill:#0f172a}.tag{font:700 22px -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",Arial,sans-serif}.item{font:700 22px -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",Arial,sans-serif;fill:#0f172a}.small{font:400 20px -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",Arial,sans-serif;fill:#475569}.boxTitle{font:700 24px -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",Arial,sans-serif;fill:#0f172a}.box{font:400 22px -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",Arial,sans-serif;fill:#0f172a}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="720" rx="28"/>
+  <text class="title" x="70" y="64">执行 / 实验 / 战略三层闭环图</text>
+  <text class="sub" x="70" y="102">AI 正在从执行层向实验层、战略判断层推进</text>
+
+  <g transform="translate(85 125)">
+    <circle cx="380" cy="290" r="262" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+    <circle cx="380" cy="290" r="188" fill="#ede9fe" stroke="#7c3aed" stroke-width="3" opacity="0.82"/>
+    <circle cx="380" cy="290" r="110" fill="#dcfce7" stroke="#059669" stroke-width="3"/>
+
+    <path d="M380 28 A262 262 0 0 1 642 290" fill="none" stroke="#cbd5e1" stroke-width="3" stroke-dasharray="9 9"/>
+    <path d="M380 102 A188 188 0 0 1 568 290" fill="none" stroke="#7c3aed" stroke-width="3" stroke-dasharray="8 8"/>
+    <path d="M380 180 A110 110 0 0 1 490 290" fill="none" stroke="#059669" stroke-width="3" stroke-dasharray="7 7"/>
+
+    <text class="layerTitle" x="380" y="278" text-anchor="middle">执行闭环</text>
+    <text class="tag" x="380" y="315" text-anchor="middle" fill="#059669">AI 主导</text>
+    <text class="small" x="380" y="351" text-anchor="middle">写代码 · 跑测试 · 修 bug · 调参</text>
+
+    <text class="layerTitle" x="380" y="145" text-anchor="middle">实验闭环</text>
+    <text class="tag" x="380" y="178" text-anchor="middle" fill="#7c3aed">人机协作</text>
+    <text class="item" x="191" y="300" text-anchor="middle">提假设</text>
+    <text class="item" x="569" y="300" text-anchor="middle">跑实验</text>
+    <text class="item" x="380" y="485" text-anchor="middle">分析指标 · 迭代方案</text>
+
+    <text class="layerTitle" x="380" y="52" text-anchor="middle">战略闭环</text>
+    <text class="tag" x="380" y="84" text-anchor="middle" fill="#475569">人类主导</text>
+    <text class="item" x="116" y="300" text-anchor="middle">选问题</text>
+    <text class="item" x="644" y="300" text-anchor="middle">定路线</text>
+    <text class="item" x="380" y="556" text-anchor="middle">判断结果 · 决定是否继续</text>
+
+    <path d="M490 290 C535 250 570 205 590 145" fill="none" stroke="#7c3aed" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <path d="M590 145 C645 127 690 100 720 60" fill="none" stroke="#7c3aed" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <text class="tag" x="690" y="128" fill="#7c3aed" transform="rotate(-30 690 128)">AI 能力外扩</text>
+  </g>
+
+  <rect x="820" y="198" width="310" height="324" rx="22" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text class="boxTitle" x="858" y="246">当前状态</text>
+  <circle cx="865" cy="296" r="10" fill="#059669"/>
+  <text class="box" x="890" y="304">执行层：已经高度自动化</text>
+  <circle cx="865" cy="366" r="10" fill="#7c3aed"/>
+  <text class="box" x="890" y="374">实验层：正在被自动化</text>
+  <circle cx="865" cy="436" r="10" fill="#94a3b8"/>
+  <text class="box" x="890" y="444">战略层：仍主要依赖</text>
+  <text class="box" x="890" y="476">人类判断</text>
+
+  <rect x="170" y="640" width="860" height="46" rx="16" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+  <text class="boxTitle" x="600" y="671" text-anchor="middle">真正的分界线：执行已经便宜，判断正在变贵。</text>
+</svg>

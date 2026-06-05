@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">AI 研发闭环八环节图</title>
+  <desc id="desc">展示 AI 研发闭环八个关键环节及其自动化程度。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2563eb"/>
+    </marker>
+    <style>
+      .bg{fill:#f8fafc}.title{font:700 34px -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",Arial,sans-serif;fill:#0f172a}.sub{font:400 22px -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",Arial,sans-serif;fill:#475569}.nodeText{font:700 23px -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",Arial,sans-serif}.nodeSub{font:400 18px -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",Arial,sans-serif}.center{font:800 34px -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",Arial,sans-serif;fill:#0f172a}.legend{font:400 20px -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",Arial,sans-serif;fill:#475569}.legendStrong{font:700 21px -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",Arial,sans-serif;fill:#0f172a}.ai{fill:#059669;stroke:#047857}.coop{fill:#dbeafe;stroke:#2563eb}.human{fill:#ffffff;stroke:#cbd5e1}.white{fill:#ffffff}.dark{fill:#0f172a}.muted{fill:#475569}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="760" rx="28"/>
+  <text class="title" x="70" y="64">AI 研发闭环八环节图</text>
+  <text class="sub" x="70" y="102">执行与评估更容易自动化，目标和下一步选择仍需要人类判断</text>
+
+  <circle cx="600" cy="398" r="232" fill="none" stroke="#bfdbfe" stroke-width="4" stroke-dasharray="10 12"/>
+  <path d="M600 166 C720 168 828 237 880 337" fill="none" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M880 459 C828 559 720 628 600 630" fill="none" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M480 630 C360 628 252 559 200 459" fill="none" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M200 337 C252 237 360 168 480 166" fill="none" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <circle cx="600" cy="398" r="116" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <text class="center" x="600" y="390" text-anchor="middle">AI 研发闭环</text>
+  <text class="sub" x="600" y="426" text-anchor="middle">循环推进 · 持续迭代</text>
+
+  <g transform="translate(505 140)">
+    <rect class="human" width="190" height="82" rx="18" stroke-width="2"/>
+    <text class="nodeText dark" x="95" y="35" text-anchor="middle">目标定义</text>
+    <text class="nodeSub muted" x="95" y="62" text-anchor="middle">人类主导</text>
+  </g>
+  <g transform="translate(790 220)">
+    <rect class="coop" width="210" height="82" rx="18" stroke-width="2"/>
+    <text class="nodeText dark" x="105" y="35" text-anchor="middle">任务拆解</text>
+    <text class="nodeSub muted" x="105" y="62" text-anchor="middle">人机协作</text>
+  </g>
+  <g transform="translate(855 358)">
+    <rect class="coop" width="220" height="82" rx="18" stroke-width="2"/>
+    <text class="nodeText dark" x="110" y="35" text-anchor="middle">上下文获取</text>
+    <text class="nodeSub muted" x="110" y="62" text-anchor="middle">人机协作</text>
+  </g>
+  <g transform="translate(760 535)">
+    <rect class="ai" width="245" height="86" rx="18" stroke-width="2"/>
+    <text class="nodeText white" x="122.5" y="36" text-anchor="middle">代码 / 实验执行</text>
+    <text class="nodeSub white" x="122.5" y="64" text-anchor="middle">AI 主导</text>
+  </g>
+  <g transform="translate(477 625)">
+    <rect class="ai" width="245" height="86" rx="18" stroke-width="2"/>
+    <text class="nodeText white" x="122.5" y="36" text-anchor="middle">测试评估</text>
+    <text class="nodeSub white" x="122.5" y="64" text-anchor="middle">AI 主导</text>
+  </g>
+  <g transform="translate(190 535)">
+    <rect class="coop" width="230" height="86" rx="18" stroke-width="2"/>
+    <text class="nodeText dark" x="115" y="36" text-anchor="middle">Review 审计</text>
+    <text class="nodeSub muted" x="115" y="64" text-anchor="middle">人机协作</text>
+  </g>
+  <g transform="translate(125 358)">
+    <rect class="coop" width="220" height="82" rx="18" stroke-width="2"/>
+    <text class="nodeText dark" x="110" y="35" text-anchor="middle">结果解释</text>
+    <text class="nodeSub muted" x="110" y="62" text-anchor="middle">人机协作</text>
+  </g>
+  <g transform="translate(200 220)">
+    <rect class="human" width="220" height="82" rx="18" stroke-width="2"/>
+    <text class="nodeText dark" x="110" y="35" text-anchor="middle">下一步选择</text>
+    <text class="nodeSub muted" x="110" y="62" text-anchor="middle">人类主导</text>
+  </g>
+
+  <rect x="70" y="660" width="326" height="64" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="94" y="681" width="26" height="22" rx="6" fill="#059669"/>
+  <text class="legendStrong" x="135" y="699">深色：AI 主导</text>
+  <rect x="430" y="660" width="340" height="64" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="454" y="681" width="26" height="22" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text class="legendStrong" x="495" y="699">中色：人机协作</text>
+  <rect x="805" y="660" width="325" height="64" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="829" y="681" width="26" height="22" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text class="legendStrong" x="870" y="699">浅色：人类主导</text>
+</svg>
