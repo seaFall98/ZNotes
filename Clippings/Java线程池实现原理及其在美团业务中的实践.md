@@ -11,6 +11,7 @@ tags:
 ---
 致远 陆晨 *2020年4月2日 20:00*
 
+本人补充：[[Java线程池最新实践：从架构设计到业务落地（2026补充）]]
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/hEx03cFgUsVqYWAk393dNLxQAjWtfrIG5CtDsjpvgOPUg1daGyIyrTK8mz8sIab7RxWuBzeo95Oo2mNEJXnxicg/640?wx_fmt=png&tp=webp&wxfrom=10005&wx_lazy=1#imgIndex=0)
 
 **总第387篇**
