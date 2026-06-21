@@ -629,11 +629,11 @@ MCP Tool 应该是**语义化业务能力**，不是裸系统能力。
 
 ## 7.3 Tool 设计粒度
 
-|粒度|示例|问题|
-|---|---|---|
-|太细|getOrderStatus、getOrderAmount、getOrderItems|模型要多次调用，成本高，链路长|
-|太粗|handleAllOrderProblems|不可控，难审计|
-|合适|getOrderDetail、searchAbnormalOrders、createRefundTicket|语义清晰，边界明确|
+| 粒度  | 示例                                                     | 问题              |
+| --- | ------------------------------------------------------ | --------------- |
+| 太细  | getOrderStatus、getOrderAmount、getOrderItems            | 模型要多次调用，成本高，链路长 |
+| 太粗  | handleAllOrderProblems                                 | 不可控，难审计         |
+| 合适  | getOrderDetail、searchAbnormalOrders、createRefundTicket | 语义清晰，边界明确       |
 
 ## 7.4 Java/Spring Boot 伪代码
 
