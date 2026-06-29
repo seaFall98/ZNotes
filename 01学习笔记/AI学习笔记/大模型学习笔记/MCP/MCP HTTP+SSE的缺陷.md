@@ -1,5 +1,5 @@
 MCP 的 **HTTP+SSE** 主要缺陷在于：它是早期远程传输方案，已经被 **Streamable HTTP** 取代。官方规范在 2025-03-26 版本中明确写到，Streamable HTTP “replaces” 2024-11-05 的 HTTP+SSE transport；后续草案也将 HTTP+SSE 归入 Deprecated，并建议迁移到 Streamable HTTP。([modelcontextprotocol.io](https://modelcontextprotocol.io/specification/2025-03-26/basic/transports "Transports - Model Context Protocol"))
-
+[[Streamable HTTP详解]]
 ## 主要缺陷
 
 ### 1. 两条通道，架构复杂
