@@ -660,31 +660,7 @@ def execute_sql(sql: str) -> str:
 
 # 11. 一张总览图
 
-```mermaid
-flowchart TD
-    A[LangChain / Agent / MCP Client] --> B{POST /mcp}
-
-    B --> C[Short tool call]
-    C --> D[200 application/json]
-    D --> E[Stateless: request ends]
-
-    B --> F[Long task]
-    F --> G[200 text/event-stream]
-    G --> H[progress events]
-    H --> I[final result]
-    I --> E
-
-    A --> J{Need server push / subscription?}
-    J -->|No| K[No GET SSE needed]
-    J -->|Yes| L[GET /mcp Accept: text/event-stream]
-
-    A --> M{Need cross-request server state?}
-    M -->|No| N[No MCP-Session-Id]
-    M -->|Yes| O[MCP-Session-Id]
-    O --> P[Stateful session infra]
-```
-
----
+![[mermaid-diagram.png]]
 
 # 12. 最终版心智模型
 
