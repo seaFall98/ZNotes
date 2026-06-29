@@ -8,11 +8,11 @@
 
 类比：
 
-|类比对象|MCP 像什么|解释|
-|---|---|---|
-|USB-C|AI 应用的统一外设接口|不同工具、数据库、文件系统、业务服务，都可以用统一方式接入 AI 应用|
-|JDBC|AI 世界里的“外部能力访问规范”|Java 应用通过 JDBC 访问不同数据库；LLM 应用通过 MCP 访问不同工具/资源|
-|LSP|AI 工具生态里的协议层|LSP 统一 IDE 与语言服务；MCP 统一 AI Host 与外部能力|
+| 类比对象  | MCP 像什么           | 解释                                            |
+| ----- | ----------------- | --------------------------------------------- |
+| USB-C | AI 应用的统一外设接口      | 不同工具、数据库、文件系统、业务服务，都可以用统一方式接入 AI 应用           |
+| JDBC  | AI 世界里的“外部能力访问规范” | Java 应用通过 JDBC 访问不同数据库；LLM 应用通过 MCP 访问不同工具/资源 |
+| LSP   | AI 工具生态里的协议层      | LSP 统一 IDE 与语言服务；MCP 统一 AI Host 与外部能力         |
 
 官方文档也直接把 MCP 描述为连接 AI 应用与外部系统的开放标准，可连接数据源、工具和工作流，并类比为 AI 应用的 USB-C 接口。([Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro "What is the Model Context Protocol (MCP)? - Model Context Protocol"))
 
