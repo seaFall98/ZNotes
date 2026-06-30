@@ -200,11 +200,3 @@ Signature = HMACSHA256(
 
 结构： **Header.Payload.Signature**  
 流程： **登录生成 → 前端存储 → 请求携带 → 验签认证**
-
----
-
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/2d66846c0fbf4e1181e67009633c918c.png#pic_center)
-
-*🌺The End🌺点点关注，收藏不迷路🌺*
-
-微信名片
