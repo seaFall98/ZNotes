@@ -1,4 +1,11 @@
 
+```
+Python 3.11以上  
+2025年10月22日 LangGraph 和 LangChain 的 1.0  
+2025-04 langgraph 0.3.x、langchain 0.3.x  
+2024-08 langgraph 0.1.x、langchain 0.2.x
+```
+
 LangChain最初定位是LLM应用开发框架，通过Prompt、Chain、Agent快速构建AI应用。但随着Agent进入生产环境，企业需要状态管理、任务恢复、人机协作、多步骤编排，因此LangGraph被设计为基于Graph的Agent Runtime。后续LangChain逐渐向上层Agent API演进，而底层执行能力交给LangGraph。1.0版本之后，两者形成分层架构：LangChain负责简单Agent开发，LangGraph负责复杂Agent生命周期管理。企业落地最大的挑战不是API本身，而是Python版本、依赖拆包、Pydantic迁移、checkpoint持久化以及版本锁定问题。
 
 ---
