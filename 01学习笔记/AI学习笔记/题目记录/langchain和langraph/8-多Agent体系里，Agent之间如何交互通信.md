@@ -24,7 +24,7 @@ LangGraph本质上是一个用于构建有状态、多角色Agent应用的编排
     Handoff是多Agent系统中最常见的模式，即一个Agent将控制权显式地"移交"给另一个。
     *   **实现方式**：通常通过创建特殊的`transfer_to_xxx`工具。当Agent调用该工具时，会返回一个`Command`对象，指定要跳转到的目标Agent节点(`goto`)，并可将当前状态(`state`)作为负载传递过去。
     *   **架构模式**：
-        *   **Supervisor (主管模式)**：由一个中央主管Agent负责调度，根据任务将工作委派给其他专业Agent。
+        *   **Supervisor (主管模式)**：由一个中央主管Agent负责调度，根据任务将工作委派给其他专业Agent。(来自langgraph-supervisor库)
         *   **Swarm (群组模式)**：去中心化，Agent之间根据各自的专长动态地相互移交控制权。
 
 *   **核心机制二：State (共享状态)**
