@@ -69,39 +69,6 @@ from langchain.agents import create_agent
 |`cache`|`BaseCache \| None`|`None`|缓存后端，可对模型调用结果做缓存|
 |`transformers`|`Sequence[TransformerFactory] \| None`|`None`|流事件转换器工厂，用于自定义 `.stream()` 输出的事件形态|
 
-```python
-from langchain.agents import create_agent
-from langchain.chat_models import init_chat_model
-from langchain_core.tools import tool
-from langgraph.checkpoint.memory import MemorySaver
-from pydantic import BaseModel
-
-@tool
-def get_weather(city: str) -> str:
-    """Get weather for a given city."""
-    return f"It's always sunny in {city}!"
-
-class WeatherResponse(BaseModel):
-    conditions: str
-
-model = init_chat_model("anthropic:claude-sonnet-4-6", temperature=0)
-
-agent = create_agent(
-    model=model,
-    tools=[get_weather],
-    system_prompt="You are a helpful weather assistant.",
-    response_format=WeatherResponse,   # 需要结构化输出时可选
-    checkpointer=MemorySaver(),        # 支持多轮对话记忆
-    name="weather_agent",
-)
-
-config = {"configurable": {"thread_id": "1"}}
-result = agent.invoke(
-    {"messages": [{"role": "user", "content": "北京天气怎么样？"}]},
-    config=config,
-)
-print(result["messages"][-1].content)
-```
 
 ---
 
@@ -113,63 +80,27 @@ print(result["messages"][-1].content)
 from deepagents import create_deep_agent
 ```
 
-|参数|类型|默认值|作用|
-|---|---|---|---|
-|`model`|`str \| BaseChatModel \| None`|`None`（已弃用，即将强制必填）|同 `create_agent`；不显式传入将默认用 `claude-sonnet-4-6`，官方建议显式指定|
-|`tools`|`Sequence[BaseTool \| Callable \| dict] \| None`|`None`|自定义工具、LangChain 工具或 MCP 工具，与内置文件系统/任务工具并存|
-|`system_prompt`|`str \| SystemMessage \| SystemPromptConfig \| None`|`None`|系统提示词，也可传结构化 `SystemPromptConfig`|
-|`middleware`|`Sequence[AgentMiddleware]`|`()`|额外自定义中间件，会叠加在 deepagents 默认中间件栈之后|
-|`subagents`|`Sequence[SubAgent \| CompiledSubAgent \| AsyncSubAgent] \| None`|`None`|定义可被 `task` 工具调用的子智能体（专用/隔离上下文的子任务执行者），也可传入预编译的 LangGraph 子图或远程异步子智能体|
-|`skills`|`list[str] \| None`|`None`|技能目录路径列表，每个技能是含 `SKILL.md` 的目录，按需渐进加载领域知识/工作流|
-|`memory`|`list[str] \| None`|`None`|`AGENTS.md` 记忆文件路径列表，启动时始终加载，存放长期偏好/项目约定|
-|`permissions`|`list[FilesystemPermission] \| None`|`None`|声明式文件系统权限规则（`operations`/`paths`/`mode`），控制读写范围，按声明顺序首个匹配生效|
-|`backend`|`BackendProtocol \| BackendFactory \| None`|`None`|虚拟文件系统后端：内存态 `StateBackend`、持久态 `StoreBackend`、真实磁盘 `FilesystemBackend`、按路径路由的 `CompositeBackend`，或自定义/沙箱后端|
-|`interrupt_on`|`dict[str, bool \| InterruptOnConfig] \| None`|`None`|人机协同：指定哪些工具（如 `"edit_file"`）需要人工审批后才能执行|
-|`response_format`|`ResponseFormat \| type \| dict \| None`|`None`|同 `create_agent`，结构化输出配置|
-|`state_schema`|`type[DeepAgentState] \| None`|`None`|自定义状态 schema（基于 `DeepAgentState`）|
-|`context_schema`|`type \| None`|`None`|运行时上下文 schema|
-|`checkpointer`|`Checkpointer \| None`|`None`|会话级持久化（同 `create_agent`）|
-|`store`|`BaseStore \| None`|`None`|跨会话持久化（同 `create_agent`）|
-|`debug`|`bool`|`False`|调试模式|
-|`name`|`str \| None`|`None`|图名称|
-|`cache`|`BaseCache \| None`|`None`|缓存后端|
+| 参数                | 类型                                                                | 默认值                | 作用                                                                                                          |
+| ----------------- | ----------------------------------------------------------------- | ------------------ | ----------------------------------------------------------------------------------------------------------- |
+| `model`           | `str \| BaseChatModel \| None`                                    | `None`（已弃用，即将强制必填） | 同 `create_agent`；不显式传入将默认用 `claude-sonnet-4-6`，官方建议显式指定                                                     |
+| `tools`           | `Sequence[BaseTool \| Callable \| dict] \| None`                  | `None`             | 自定义工具、LangChain 工具或 MCP 工具，与内置文件系统/任务工具并存                                                                   |
+| `system_prompt`   | `str \| SystemMessage \| SystemPromptConfig \| None`              | `None`             | 系统提示词，也可传结构化 `SystemPromptConfig`                                                                           |
+| `middleware`      | `Sequence[AgentMiddleware]`                                       | `()`               | 额外自定义中间件，会叠加在 deepagents 默认中间件栈之后                                                                           |
+| `subagents`       | `Sequence[SubAgent \| CompiledSubAgent \| AsyncSubAgent] \| None` | `None`             | 定义可被 `task` 工具调用的子智能体（专用/隔离上下文的子任务执行者），也可传入预编译的 LangGraph 子图或远程异步子智能体                                       |
+| `skills`          | `list[str] \| None`                                               | `None`             | 技能目录路径列表，每个技能是含 `SKILL.md` 的目录，按需渐进加载领域知识/工作流                                                               |
+| `memory`          | `list[str] \| None`                                               | `None`             | `AGENTS.md` 记忆文件路径列表，启动时始终加载，存放长期偏好/项目约定                                                                    |
+| `permissions`     | `list[FilesystemPermission] \| None`                              | `None`             | 声明式文件系统权限规则（`operations`/`paths`/`mode`），控制读写范围，按声明顺序首个匹配生效                                                 |
+| `backend`         | `BackendProtocol \| BackendFactory \| None`                       | `None`             | 虚拟文件系统后端：内存态 `StateBackend`、持久态 `StoreBackend`、真实磁盘 `FilesystemBackend`、按路径路由的 `CompositeBackend`，或自定义/沙箱后端 |
+| `interrupt_on`    | `dict[str, bool \| InterruptOnConfig] \| None`                    | `None`             | 人机协同：指定哪些工具（如 `"edit_file"`）需要人工审批后才能执行                                                                     |
+| `response_format` | `ResponseFormat \| type \| dict \| None`                          | `None`             | 同 `create_agent`，结构化输出配置                                                                                    |
+| `state_schema`    | `type[DeepAgentState] \| None`                                    | `None`             | 自定义状态 schema（基于 `DeepAgentState`）                                                                           |
+| `context_schema`  | `type \| None`                                                    | `None`             | 运行时上下文 schema                                                                                               |
+| `checkpointer`    | `Checkpointer \| None`                                            | `None`             | 会话级持久化（同 `create_agent`）                                                                                    |
+| `store`           | `BaseStore \| None`                                               | `None`             | 跨会话持久化（同 `create_agent`）                                                                                    |
+| `debug`           | `bool`                                                            | `False`            | 调试模式                                                                                                        |
+| `name`            | `str \| None`                                                     | `None`             | 图名称                                                                                                         |
+| `cache`           | `BaseCache \| None`                                               | `None`             | 缓存后端                                                                                                        |
 
-```python
-from deepagents import create_deep_agent
-from langchain_core.tools import tool
-
-@tool
-def web_search(query: str) -> str:
-    """Search the web for a query."""
-    return f"Search results for: {query}"
-
-# 定义一个专职研究的子智能体
-research_subagent = {
-    "name": "researcher",
-    "description": "Delegate in-depth research tasks to this agent.",
-    "system_prompt": "You are a meticulous research assistant.",
-    "tools": [web_search],
-}
-
-agent = create_deep_agent(
-    model="anthropic:claude-sonnet-4-6",
-    tools=[web_search],
-    system_prompt="You are a research assistant that plans, delegates, and writes reports.",
-    subagents=[research_subagent],
-    skills=["./skills/report-writing"],       # 目录需含 SKILL.md
-    memory=["./AGENTS.md"],                   # 项目级长期记忆/约定
-    permissions=[
-        {"operations": ["write"], "paths": ["/workspace/**"], "mode": "allow"},
-        {"operations": ["read", "write"], "paths": [".env", "**/secrets/**"], "mode": "deny"},
-    ],
-    interrupt_on={"edit_file": True},          # 修改文件前需人工审批
-)
-
-result = agent.invoke(
-    {"messages": [{"role": "user", "content": "研究 LangGraph 的最新特性并写一份摘要"}]}
-)
-print(result["messages"][-1].content)
-```
 
 ---
 
