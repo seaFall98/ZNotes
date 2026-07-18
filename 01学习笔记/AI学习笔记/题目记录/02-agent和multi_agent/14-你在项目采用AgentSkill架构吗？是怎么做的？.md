@@ -1,4 +1,6 @@
 
+旧的回答
+
 2025 年 10 月中旬，Anthropic 正式发布 Claude Skills。两个月后，Agent Skills 作为开放标准被进一步发布，我觉得：是诞生了一种新的 AI Agent 项目开发方案。单 Agent 可通过加载不同的 Skills 包，来具备不同的专业知识、工具使用能力，稳定完成特定任务。我的理解：可以把 Skills 理解为**“通用 Agent 的扩展包”**，所以整个 Agent 项目，可以采用模块化、技能化的封装，这种 Agent 方案，可以这极大减少了上下文长度，降低了模型的认知负荷，使工具选择更加精准和快速。
 
 但是，目前 Skills 主要用于各种平台工具，像 Claude code 和 Cursor 平台，在实际的企业项目中，应该需要根据业务来自己定义 Skills，并和 langgraph 的 Agent 整合，来完可定制化的项目代码落地。我的实现步骤是：
@@ -213,7 +215,26 @@ print(result["messages"][-1].content)
 
 [langchain skills and interpreter](https://www.langchain.com/blog/interpreter-skills)官方文章的" Can't I just include a script file?"特意强调了跟/scripts下的脚本代码的区别
 
+- **Skills can now direct the harness, not just the model.** Because interpreter code can talk to the agent loop directly, a skill can spawn subagents, manage a task graph, and handle partial failures as one reviewed workflow
+- **Skills can now become both a set of instructions and an API.** A normal skill tells the agent _how_ to do a task and hopes it follows along. An interpreter skill ships a module, so the determinsitc part lives in code that can be reviewed and iterated on, while the model decides when to call it and what inputs to pass
+- **Agent work can now be more easily evaluated.** Instead of asking "did the agent generally follow instructions?", you can ask more concrete questions like "did it call the expected function?"
+
+Q : **Can't I just include a script file?**
+
+A : Script files are useful for a different reason.
+
+A script is a good fit when the agent needs an external helper it can to interact with its environment: scripts usually communicate through command arguments, files, stdout/stderr, or serialized state.
+
+That boundary makes scripts a poor fit for **orchestrating agent work**. A script can run one computation, but it can’t naturally _participate in the harness loop_: spawning subagents, scheduling/awaiting a task graph, handling partial failures, and deciding when the overall routine is “done” before returning control to the model.
+
+In the repo triage example, the module calls an allowlisted `tools.task(...)` function to spawn subagents from inside the routine. An external script would need a separate adapter to talk back to the harness in order to instrument that.
+
+---
+
+
 [[LangChain 让 Agent 的技能不再只靠提示词：Interpreter Skills 把确定性写进代码 - 智能体工程 - 创艺提示符]]
+
+---
 #### 传统Skill vs Interpreter Skill
 
 传统Skill的本质是**提示词驱动的 specialization**——告诉Agent"怎么做"，希望Agent遵循指令。Interpreter Skill则**直接附带可执行的TypeScript模块**，Agent可以在解释器中导入并运行。

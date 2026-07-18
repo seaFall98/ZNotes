@@ -200,9 +200,9 @@ agent = create_deep_agent(
 )
 ```
 
-### 4.4 远程子 Agent（Deep Agents v0.5 新特性）
+### 4.4 AsyncSubAgent（Deep Agents v0.5 新特性）
 
-2026年4月，Deep Agents v0.5 引入了**远程子 Agent**能力：
+2026年4月，Deep Agents v0.5 引入了可远程调用的**异步子 Agent**能力：
 
 - 与阻塞主 Agent 直到完成的内联子 Agent 不同，远程子 Agent 在后台运行
 - 适合需要数分钟而非数秒的任务——如深度研究、大规模代码分析、多步数据管道
