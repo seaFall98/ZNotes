@@ -4,6 +4,13 @@ MCP Server 可以同时暴露三类能力：Tools、Resources 和 Prompts。Tool
 
 ## 为什么要单独的resource呢，做成一个search tool不行吗？
 
+```
+The Model Context Protocol (MCP) provides a standardized way for servers to expose resources to clients. Resources allow servers to share data that provides context to language models, such as files, database schemas, or application-specific information. Each resource is uniquely identified by a url.
+```
+
+(Resource 是可被多个客户端或 Agent 按 URI 读取的、相对稳定或可寻址的上下文资料，例如规章制度、配置文件、项目文档。它不需要每次都通过 Tool 临时执行查询或动作)
+
+---
 
 **很多简单场景只做一个 `search_orders` Tool 就够了**。Resource 不是必须的，也不是 Tool 的替代品。
 
