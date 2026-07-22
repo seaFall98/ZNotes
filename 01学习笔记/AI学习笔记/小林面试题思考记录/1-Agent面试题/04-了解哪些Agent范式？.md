@@ -9,6 +9,10 @@
 
 **Reflection（反思）**  可以理解为reviewer， langgraph通过拦截模型调用前后的生命周期（如 `before_model`），让 Agent 在生成结果后自动触发一个“反思器（Critic）”进行评估，如果评估不通过，则通过返回 `Command` 指令强制流程跳转回生成节点或终止流程。
 
+我觉得随着模型能力越来越强，在执行过中只需要在少量关键节点用Reflection，在任务完成后用单独的上下文干净的review agent来起到反思的效果，反而更好
+
+不需要过度工程化，觉得我一定要Reflection保证质量，这是很实际的trade-off，AI大模型里处处是trade-off，Anthropic官方都提倡这个理念
+
 
 实际是混用的：用 Plan-and-Execute 做整体规划，每个步骤内部用 ReAct 来执行，关键步骤再加上 Reflection 做质量把关
 
