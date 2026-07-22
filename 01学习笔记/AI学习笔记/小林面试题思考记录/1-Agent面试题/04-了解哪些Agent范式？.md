@@ -18,3 +18,14 @@
 MultiAgent
 
 Agentic Workflow
+
+---
+避雷
+
+第一个雷是设计范式不熟，ReAct是最常见的，但Plan-and-Execute（把规划和执行解耦）和Reflection（执行后加自我评估环节）也是必须说出来的，三个范式各有适用场景。
+
+第二个雷是把Reflection当调试手段，它是正式的运行时机制，内嵌在Agent的执行流程里，代价是增加token消耗和延迟，这个取舍在面试里经常被追问。
+
+第三个雷也是最重要的一个：以为Agent是生产环境的首选。实际上纯Agent模式在生产里用得很少，因为行为不确定、难以调试、成本容易失控。
+
+真正的工程答案是AgenticWorkflow：整体用Workflow框住主流程保证可控(其实就是langraph呢)，在需要灵活判断的节点嵌入Agent能力。能主动说出「为什么纯Agent在生产里有局限」，是这道题拿高分的关键。
