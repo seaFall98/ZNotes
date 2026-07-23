@@ -26,6 +26,8 @@ update:可以看一下智谱这些官方提供的知识库[智谱知识库](http
 变更感知kafka这里看原文[变更感知](https://xiaolinnote.com/ai/rag/19_dynamic_update.html#%E4%B8%A4%E7%A7%8D%E4%B8%BB%E6%B5%81%E7%9A%84%E5%8F%98%E6%9B%B4%E6%84%9F%E7%9F%A5%E6%96%B9%E5%BC%8F)
 注意不少现代化的内容管理工具（Confluence、Notion、语雀等）都支持Webhook，文档保存时会自动向你配置的地址推送一条HTTP请求，天然适合做事件驱动更新，不需要引入消息队列这么重的组件。
 
+ragent也用了rocketmq是做这个功能的吧
+
 ---
 
 更稳妥的生产方案 - 灰度更新 蓝绿发布 而不是直接先删后增
